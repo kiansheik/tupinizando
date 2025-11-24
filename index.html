@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tupinizando | Aprenda Tupi Antigo</title>
+    <meta name="description" content="Aprenda Tupi Antigo com Mateus Oliveira. Conecte-se com a língua que formou a identidade brasileira.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2E5E4E; /* Forest Green */
+            --secondary-color: #D4A373; /* Earthy Beige/Orange */
+            --accent-color: #BC4749; /* Urucum Red */
+            --bg-color: #FAFAF5;
+            --text-color: #333;
+            --light-text: #fff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        /* BUTTONS */
+        .btn-cta {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            display: inline-block;
+            box-shadow: 0 4px 15px rgba(188, 71, 73, 0.3);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(188, 71, 73, 0.4);
+            background-color: #a33b3d;
+        }
+
+        /* HEADER */
+        header {
+            background: linear-gradient(rgba(46, 94, 78, 0.9), rgba(46, 94, 78, 0.9)), url('http://googleusercontent.com/image_collection/image_retrieval/16722126820050379690_0');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .nav-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--secondary-color);
+        }
+
+        /* HERO SECTION */
+        .hero {
+            padding: 80px 20px;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            color: var(--primary-color);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            color: #555;
+        }
+
+        /* PHILOSOPHY SECTION */
+        .philosophy {
+            background-color: white;
+            padding: 80px 20px;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            color: var(--primary-color);
+            margin-bottom: 50px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .feature-card {
+            text-align: center;
+            padding: 30px;
+            border-radius: 15px;
+            background: var(--bg-color);
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+        }
+
+        /* COURSE MODULES */
+        .modules {
+            padding: 80px 20px;
+            background-color: #f2f2e8;
+        }
+
+        .module-list {
+            list-style: none;
+            counter-reset: module-counter;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .module-item {
+            background: white;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            display: flex;
+            align-items: center;
+        }
+
+        .module-item::before {
+            counter-increment: module-counter;
+            content: counter(module-counter);
+            background: var(--primary-color);
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 20px;
+            flex-shrink: 0;
+        }
+
+        .module-content h3 {
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+
+        /* BIO SECTION */
+        .bio {
+            padding: 80px 20px;
+            background-color: white;
+        }
+
+        .bio-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+
+        .bio-image {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .bio-image img {
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 15px 15px 0px var(--secondary-color);
+        }
+
+        .bio-text {
+            flex: 1.5;
+            min-width: 300px;
+        }
+
+        .bio-text h2 {
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        /* SOCIAL PROOF */
+        .social-proof {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+
+        .stat-item h3 {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+        }
+
+        /* TESTIMONIALS */
+        .testimonials {
+            padding: 80px 20px;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+            font-style: italic;
+            position: relative;
+        }
+
+        .testimonial-card::after {
+            content: '"';
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 4rem;
+            color: #eee;
+            font-family: serif;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: #222;
+            color: #aaa;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .footer-links a {
+            color: white;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .bio-content { flex-direction: column; }
+            .bio-image img { width: 80%; margin: 0 auto; display: block; box-shadow: 10px 10px 0px var(--secondary-color); }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <div class="logo">TUPINIZANDO</div>
+            <a href="https://go.hotmart.com/K93206417I" class="btn-cta" style="padding: 10px 20px; font-size: 0.9rem;">Matricule-se</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>Conheça a língua que dá nome ao Brasil</h1>
+        <p>O Tupi Antigo não é coisa do passado. Ele está nas nossas cidades, nos nossos nomes e na nossa cultura. Resgate sua história de forma descomplicada.</p>
+        <a href="https://go.hotmart.com/K93206417I" class="btn-cta">Quero Aprender Tupi</a>
+    </section>
+
+    <section class="philosophy">
+        <div class="container">
+            <h2 class="section-title">Por que estudar Tupi Antigo?</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🌿</div>
+                    <h3>Conexão Ancestral</h3>
+                    <p>Entenda a visão de mundo dos povos originários e como ela moldou o jeito de ser brasileiro.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🗣️</div>
+                    <h3>Sem "Terror" Linguístico</h3>
+                    <p>Uma metodologia direta, comparando com o português que você já fala, para acelerar o aprendizado.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🗺️</div>
+                    <h3>O Mundo ao Seu Redor</h3>
+                    <p>Descubra o significado de Ipanema, Tatuapé, Anhangabaú e milhares de outras palavras do dia a dia.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="social-proof">
+        <h2>Junte-se à retomada linguística</h2>
+        <div class="stats">
+            <div class="stat-item">
+                <h3>+200k</h3>
+                <p>Seguidores nas Redes</p>
+            </div>
+            <div class="stat-item">
+                <h3>+1M</h3>
+                <p>Visualizações</p>
+            </div>
+            <div class="stat-item">
+                <h3>100%</h3>
+                <p>Paixão pelo Brasil</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="modules">
+        <div class="container">
+            <h2 class="section-title">O que você vai aprender</h2>
+            <ul class="module-list">
+                <li class="module-item">
+                    <div class="module-content">
+                        <h3>Introdução e Pronúncia</h3>
+                        <p>Os sons do Tupi, o alfabeto e como ler os primeiros textos.</p>
+                    </div>
+                </li>
+                <li class="module-item">
+                    <div class="module-content">
+                        <h3>A Lógica do Pensamento Tupi</h3>
+                        <p>Como a língua estrutura o mundo: substantivos, verbos e a natureza.</p>
+                    </div>
+                </li>
+                <li class="module-item">
+                    <div class="module-content">
+                        <h3>Gramática Descomplicada</h3>
+                        <p>Conjugações, negação e posse sem a chatice das aulas tradicionais.</p>
+                    </div>
+                </li>
+                <li class="module-item">
+                    <div class="module-content">
+                        <h3>Cultura e História</h3>
+                        <p>Aprofunde-se nos costumes, lendas e na história da costa brasileira.</p>
+                    </div>
+                </li>
+            </ul>
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="https://go.hotmart.com/K93206417I" class="btn-cta">Ver Grade Completa</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="bio">
+        <div class="container">
+            <div class="bio-content">
+                <div class="bio-image">
+                    <img src="http://googleusercontent.com/image_collection/image_retrieval/3757824727990085600_0" alt="Mateus Oliveira - Tupinizando">
+                </div>
+                <div class="bio-text">
+                    <h2>Quem está no comando</h2>
+                    <p><strong>Mateus Oliveira</strong> é estudante, pesquisador e o criador do <em>Tupinizando</em>, a maior página de divulgação de Tupi Antigo do Brasil.</p>
+                    <br>
+                    <p>Sua missão é tirar o Tupi dos livros acadêmicos e devolvê-lo ao povo brasileiro. Com uma didática jovem e acessível, Mateus traduz conceitos complexos da linguística para uma linguagem que todos entendem. Ele colabora ativamente com grandes nomes da área, como o Prof. Eduardo Navarro (USP), para garantir a precisão histórica e gramatical de todo o conteúdo.</p>
+                    <br>
+                    <p>Não é só sobre aprender uma língua, é sobre descobrir quem nós somos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">Quem estuda, recomenda</h2>
+            <div class="features-grid">
+                <div class="testimonial-card">
+                    <p>"Sempre quis saber o significado do nome da minha cidade. O curso abriu minha mente para a história do Brasil!"</p>
+                    <p style="margin-top: 15px; font-weight: bold; color: var(--accent-color);">- Marcos S.</p>
+                </div>
+                <div class="testimonial-card">
+                    <p>"A didática do Mateus é incrível. Ele explica gramática de um jeito que até quem odeia português entende."</p>
+                    <p style="margin-top: 15px; font-weight: bold; color: var(--accent-color);">- Júlia R.</p>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Material profundo e necessário. Finalmente um conteúdo de qualidade sobre nossas raízes indígenas na internet."</p>
+                    <p style="margin-top: 15px; font-weight: bold; color: var(--accent-color);">- André L.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p style="margin-bottom: 20px;">Dúvidas? Entre em contato conosco.</p>
+            <div class="footer-links">
+                <a href="https://www.instagram.com/tupinizando/">Instagram</a>
+                <a href="https://www.youtube.com/@tupinizando">YouTube</a>
+                <a href="https://go.hotmart.com/K93206417I">Curso</a>
+            </div>
+            <p style="margin-top: 30px; font-size: 0.8rem; opacity: 0.6;">© 2025 Tupinizando. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

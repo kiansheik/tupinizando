@@ -1,1 +1,1 @@
-[tupinizando.com](tupinizando.com)
+[tupinizando.com](https://www.tupinizando.com)

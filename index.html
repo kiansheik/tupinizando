@@ -297,6 +297,42 @@
             .bio-content { flex-direction: column; }
             .bio-image img { width: 80%; margin: 0 auto; display: block; box-shadow: 10px 10px 0px var(--secondary-color); }
         }
+
+        .bio-image {
+            position: relative;
+            display: inline-block;
+        }
+
+        .bio-image::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: 20px;
+            background: radial-gradient(
+                ellipse at center,
+                rgba(212, 163, 115, 0.18) 0%,
+                rgba(212, 163, 115, 0.00) 70%
+            );
+
+            filter: blur(20px); */
+            z-index: 0;
+        }
+
+        /* .bio-image img {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: none !important; /* remove the hard shadow */
+        /* } */
+                /* .bio-image img {
+            width: 100%;
+            border-radius: 20px;
+            mask-image: radial-gradient(circle at center, black 60%, transparent 100%);
+            -webkit-mask-image: radial-gradient(circle at center, black 60%, transparent 100%);
+        } */
+
+
     </style>
 </head>
 <body>

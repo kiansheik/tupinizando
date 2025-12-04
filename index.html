@@ -5,6 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tupinizando | Aprenda Tupi Antigo</title>
     <meta name="description" content="Aprenda Tupi Antigo com Mateus Oliveira. Conecte-se com a língua que formou a identidade brasileira.">
+    <!-- SEO basics -->
+    <link rel="canonical" href="https://tupinizando.com/">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Mateus Oliveira – Tupinizando">
+
+    <!-- Open Graph (Facebook / WhatsApp / etc.) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Tupinizando | Aprenda Tupi Antigo">
+    <meta property="og:description" content="Aprenda Tupi Antigo com Mateus Oliveira. Conecte-se com a língua que formou a identidade brasileira.">
+    <meta property="og:url" content="https://tupinizando.com/">
+    <meta property="og:image" content="https://tupinizando.com/android-chrome-512x512.png">
+    <meta property="og:locale" content="pt_BR">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Tupinizando | Aprenda Tupi Antigo">
+    <meta name="twitter:description" content="Aprenda Tupi Antigo com Mateus Oliveira. Conecte-se com a língua que formou a identidade brasileira.">
+    <meta name="twitter:image" content="https://tupinizando.com/android-chrome-512x512.png">
+    <meta name="twitter:site" content="@tupinizando">
+
     <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
@@ -12,7 +32,51 @@
     <link rel="manifest" href="./site.webmanifest">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="preload"
+          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap"
+          as="style"
+          onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    </noscript>
+    <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Tupinizando",
+    "alternateName": "Curso de Tupi Antigo Tupinizando",
+    "url": "https://tupinizando.com",
+    "logo": "https://tupinizando.com/android-chrome-512x512.png",
+    "description": "Tupinizando é o maior canal de divulgação e ensino de Tupi Antigo no Brasil.",
+
+    "founder": {
+        "@type": "Person",
+        "name": "Mateus Oliveira",
+        "sameAs": [
+        "https://www.instagram.com/tupinizando/",
+        "https://www.youtube.com/@tupinizando",
+        "https://www.tiktok.com/@tupinizando"
+        ]
+    },
+
+    "maintainer": {
+        "@type": "Person",
+        "name": "Kian Arad Sheik",
+        "sameAs": [
+        "https://tupinizando.com", 
+        "https://www.instagram.com/taco_chip/",
+        "https://kiansheik.io/nhe-enga/"
+        ]
+    },
+
+    "sameAs": [
+        "https://www.instagram.com/tupinizando/",
+        "https://www.youtube.com/@tupinizando",
+        "https://www.tiktok.com/@tupinizando"
+    ]
+    }
+    </script>
+
     <style>
         :root {
             --primary-color: #2E5E4E; /* Forest Green */
@@ -297,40 +361,23 @@
             .bio-content { flex-direction: column; }
             .bio-image img { width: 80%; margin: 0 auto; display: block; box-shadow: 10px 10px 0px var(--secondary-color); }
         }
+.nav-links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
 
-        .bio-image {
-            position: relative;
-            display: inline-block;
-        }
+.nav-links a {
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
 
-        .bio-image::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            border-radius: 20px;
-            background: radial-gradient(
-                ellipse at center,
-                rgba(212, 163, 115, 0.18) 0%,
-                rgba(212, 163, 115, 0.00) 70%
-            );
-
-            filter: blur(20px); */
-            z-index: 0;
-        }
-
-        /* .bio-image img {
-            position: relative;
-            z-index: 1;
-            width: 100%;
-            border-radius: 20px;
-            box-shadow: none !important; /* remove the hard shadow */
-        /* } */
-                /* .bio-image img {
-            width: 100%;
-            border-radius: 20px;
-            mask-image: radial-gradient(circle at center, black 60%, transparent 100%);
-            -webkit-mask-image: radial-gradient(circle at center, black 60%, transparent 100%);
-        } */
+.nav-links a:hover {
+    opacity: 0.8;
+}
 
 
     </style>
@@ -339,16 +386,27 @@
 
     <header>
         <div class="nav-container">
-            <div class="logo">
-                TUPINIZANDO</div>
-                <!-- <img src="./melhor.png" alt="Tupinizando Logo" style="height: 100px;"> -->
-            <a href="https://wa.me/5519978296765" class="btn-cta" style="padding: 10px 20px; font-size: 0.9rem;">Matricule-se</a>
-        </div>
-    </header>
+            <a href="./" class="logo">TUPINIZANDO</a>
+
+        <nav class="nav-links">
+            <a href="./tupi-antigo">Sobre o Tupi Antigo</a>
+            <!-- No futuro você pode adicionar mais:
+            <a href="#curso">O Curso</a>
+            <a href="#contato">Contato</a>
+            -->
+        </nav>
+
+        <a href="https://wa.me/5519978296765"
+           class="btn-cta"
+           style="padding: 10px 20px; font-size: 0.9rem;">
+            Matricule-se
+        </a>
+    </div>
+</header>
 
     <section class="hero">
-                <img src="./melhor.png" alt="Tupinizando Logo" style="height: 120px; margin-bottom: 20px; margin-top: -20px;">
-        <h1>Conheça a língua que dá nome ao Brasil</h1>
+                <img src="./melhor.png" alt="Logo Tupinizando – Curso de Tupi Antigo" style="height: 120px; margin-bottom: 20px; margin-top: -20px;">
+        <h1>Conheça a língua que dá nome ao Brasil com Tupinizando</h1>
         <p>O Tupi Antigo não é coisa do passado. Ele está nas nossas cidades, nos nossos nomes e na nossa cultura. Resgate sua história de forma descomplicada.</p>
         <a href="https://wa.me/5519978296765" class="btn-cta">Quero Aprender Tupi</a>
     </section>
@@ -373,6 +431,11 @@
                     <p>Descubra o significado de Ipanema, Tatuapé, Anhangabaú e milhares de outras palavras do dia a dia.</p>
                 </div>
             </div>
+            <p style="text-align: center; margin-top: 30px; font-size: 1rem;">
+            Quer entender a história, a gramática e quem estuda essa língua hoje?
+            Veja o nosso guia completo de
+            <a href="./tupi-antigo"><strong>Tupi Antigo</strong></a>.
+        </p>
         </div>
     </section>
 
@@ -471,6 +534,7 @@
         <div class="container">
             <p style="margin-bottom: 20px;">Dúvidas? Entre em contato conosco.</p>
             <div class="footer-links">
+                <a href="/tupi-antigo">Guia de Tupi Antigo</a>
                 <a href="https://www.instagram.com/tupinizando/">Instagram</a>
                 <a href="https://www.youtube.com/@tupinizando">YouTube</a>
                 <a href="https://wa.me/5519978296765">Curso</a>

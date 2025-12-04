@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Tupi Antigo | História, Gramática e Como Aprender</title>
+  <meta name="description" content="Entenda o que é o Tupi Antigo, sua história, gramática, principais livros, dicionários e como começar a estudar hoje com o Tupinizando.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Reuse your existing fonts & CSS from index.html here -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary-color: #2E5E4E;
+      --secondary-color: #D4A373;
+      --accent-color: #BC4749;
+      --bg-color: #FAFAF5;
+      --text-color: #333;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      line-height: 1.6;
+    }
+    h1, h2, h3 { font-family: 'Montserrat', sans-serif; }
+
+    a { color: var(--accent-color); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    header {
+      background: linear-gradient(rgba(46, 94, 78, 0.96), rgba(46, 94, 78, 0.9));
+      color: #fff;
+      padding: 16px 0;
+    }
+    .nav-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+    }
+    .logo {
+      font-size: 1.4rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+    }
+
+    .btn-cta {
+      background-color: var(--accent-color);
+      color: #fff;
+      padding: 12px 24px;
+      border-radius: 99px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      border: none;
+      cursor: pointer;
+      display: inline-block;
+    }
+    .btn-cta:hover {
+      background-color: #a03a3b;
+      transform: translateY(-1px);
+    }
+
+    .page-hero {
+      padding: 60px 20px 40px;
+      background: #F4F2EC;
+      border-bottom: 1px solid rgba(0,0,0,0.04);
+    }
+    .hero-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+      gap: 40px;
+      align-items: center;
+    }
+    .hero-kicker {
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      letter-spacing: 0.18em;
+      color: var(--secondary-color);
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .page-hero h1 {
+      font-size: 2.6rem;
+      margin-bottom: 16px;
+      color: var(--primary-color);
+    }
+    .page-hero p {
+      font-size: 1.05rem;
+      margin-bottom: 16px;
+    }
+    .hero-bullets {
+      list-style: none;
+      margin: 12px 0 22px;
+      padding-left: 0;
+    }
+    .hero-bullets li {
+      margin-bottom: 6px;
+      font-size: 0.98rem;
+    }
+
+    .hero-cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 10px;
+    }
+    .hero-side-card {
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.06);
+      padding: 18px 20px;
+    }
+    .hero-side-card h3 {
+      font-size: 1rem;
+      margin-bottom: 8px;
+      color: var(--primary-color);
+    }
+    .hero-side-card p {
+      font-size: 0.9rem;
+      margin-bottom: 6px;
+    }
+    .hero-side-card a {
+      font-weight: 600;
+      font-size: 0.88rem;
+    }
+
+    .toc {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 24px 20px 12px;
+      font-size: 0.95rem;
+    }
+    .toc h2 {
+      font-size: 1rem;
+      margin-bottom: 8px;
+      color: var(--primary-color);
+    }
+    .toc ol {
+      padding-left: 18px;
+      display: grid;
+      gap: 3px;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+
+    .section {
+      padding: 56px 20px 32px;
+    }
+    .section:nth-of-type(even) {
+      background-color: #FFFFFF;
+    }
+    .section:nth-of-type(odd) {
+      background-color: #FAFAF5;
+    }
+    .section-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .section h2 {
+      font-size: 1.8rem;
+      margin-bottom: 18px;
+      color: var(--primary-color);
+    }
+    .section h3 {
+      font-size: 1.25rem;
+      margin-top: 20px;
+      margin-bottom: 10px;
+    }
+    .section p {
+      margin-bottom: 12px;
+      font-size: 0.98rem;
+    }
+    .pill {
+      display: inline-block;
+      font-size: 0.74rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(212, 163, 115, 0.16);
+      color: #7c5833;
+      margin-bottom: 10px;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+      gap: 32px;
+      align-items: flex-start;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 18px 20px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+      font-size: 0.94rem;
+    }
+    .card h3 { margin-top: 0; }
+
+    .book-list, .resource-list {
+      list-style: none;
+      padding-left: 0;
+      margin: 0;
+    }
+    .book-list li,
+    .resource-list li {
+      margin-bottom: 14px;
+    }
+    .tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: #EFE7DA;
+      margin-left: 6px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+    }
+
+    .faq details {
+      margin-bottom: 10px;
+      background: #fff;
+      border-radius: 12px;
+      padding: 10px 14px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    }
+    .faq summary {
+      cursor: pointer;
+      font-weight: 600;
+      color: var(--primary-color);
+    }
+    .faq p {
+      margin-top: 6px;
+      font-size: 0.94rem;
+    }
+
+    footer {
+      background: #222;
+      color: #aaa;
+      text-align: center;
+      padding: 28px 20px;
+      margin-top: 40px;
+    }
+    footer a { color: #fff; font-weight: 600; margin: 0 8px; }
+
+    @media (max-width: 900px) {
+      .hero-inner {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .grid-2 {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="nav-container">
+    <a href="../" class="logo">TUPINIZANDO</a>
+    <a href="https://wa.me/5519978296765" class="btn-cta">Matricule-se</a>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section class="page-hero">
+    <div class="hero-inner">
+      <div>
+        <div class="hero-kicker">Guia completo</div>
+        <h1>Tupi Antigo: história, língua clássica do Brasil e como estudar hoje</h1>
+        <p>
+          Esta página é o seu ponto de partida para entender o que é o Tupi Antigo,
+          por que ele é chamado de “língua indígena clássica do Brasil” e como começar
+          a aprender com materiais modernos, comunidades e cursos.
+        </p>
+        <ul class="hero-bullets">
+          <li>✅ O que é Tupi Antigo e sua relação com o tupi-guarani e o nheengatu</li>
+          <li>✅ Principais livros, dicionários e gramáticas (Navarro e outros)</li>
+          <li>✅ Dicionário online e gramática interativa para consultar do celular</li>
+          <li>✅ Roteiro prático: como dar os primeiros passos em Tupi hoje</li>
+        </ul>
+        <div class="hero-cta-row">
+          <a href="https://wa.me/5519978296765" class="btn-cta">
+            Quero aprender Tupi agora
+          </a>
+          <a href="#dicionario-online">Ver dicionário online</a>
+        </div>
+      </div>
+
+      <aside class="hero-side-card">
+        <h3>Tupi Antigo no Tupinizando</h3>
+        <p>
+          O <strong>Tupinizando</strong> é hoje um dos maiores canais de divulgação de
+          Tupi Antigo nas redes, com vídeos semanais explicando vocabulário, gramática
+          e contextos históricos de forma acessível.
+        </p>
+        <p style="font-size:0.86rem; opacity:0.9;">
+          Esta página foi organizada por <strong>Mateus Oliveira</strong> (criador
+          do Tupinizando) em parceria com o pesquisador <strong>Kian Sheik</strong>,
+          que mantém um dicionário digital e uma gramática online de Tupi Antigo.
+        </p>
+        <p>
+          Siga:
+          <a href="https://www.instagram.com/tupinizando/" target="_blank" rel="noopener">Instagram</a> ·
+          <a href="https://www.youtube.com/@tupinizando" target="_blank" rel="noopener">YouTube</a>
+        </p>
+      </aside>
+    </div>
+  </section>
+
+  <!-- TOC -->
+  <nav class="toc">
+    <h2>Conteúdo desta página</h2>
+    <ol>
+      <li><a href="#o-que-e">O que é o Tupi Antigo?</a></li>
+      <li><a href="#historia">História resumida da língua</a></li>
+      <li><a href="#comparacao">Tupi Antigo × Tupi-Guarani × Nheengatu</a></li>
+      <li><a href="#livros">Livros e dicionários essenciais</a></li>
+      <li><a href="#quem-estuda">Quem estuda Tupi Antigo hoje?</a></li>
+      <li><a href="#dicionario-online">Dicionário online e gramática interativa</a></li>
+      <li><a href="#como-comecar">Como começar a aprender Tupi Antigo</a></li>
+      <li><a href="#faq">Perguntas frequentes</a></li>
+    </ol>
+  </nav>
+
+  <!-- O QUE É -->
+  <section class="section" id="o-que-e">
+    <div class="section-inner">
+      <span class="pill">Fundamentos</span>
+      <h2>O que é o Tupi Antigo?</h2>
+      <p>
+        <strong>Tupi Antigo</strong> (também chamado de <em>tupinambá</em> ou
+        “língua brasílica” nas fontes coloniais) é uma língua indígena da família
+        <em>tupi-guarani</em>, pertencente ao tronco <em>tupi</em>. Ela era falada
+        por diversos povos do litoral brasileiro, como tupinambás, tupiniquins,
+        potiguaras, tamoios, caetés e outros.
+      </p>
+      <p>
+        Foi a língua que muitos colonizadores europeus realmente aprenderam e usaram
+        para se comunicar durante os primeiros séculos da colonização. Por isso,
+        diversos pesquisadores a descrevem como a <strong>língua indígena clássica
+        do Brasil</strong>, a única que deixou milhares de palavras incorporadas
+        ao português brasileiro – de nomes de animais (tatu, paca, jacaré-açu) a
+        comidas (mandioca, pipoca, pirão, pururuca) e topônimos como Ipanema,
+        Anhangabaú, Tatuapé e tantos outros.
+      </p>
+      <p>
+        Hoje o Tupi Antigo não tem falantes nativos, mas segue vivo em gramáticas,
+        catecismos, cartas indígenas, dicionários e na prática de pesquisa e
+        revitalização linguística. Ele também é a base histórica do
+        <strong>nheengatu</strong>, a chamada “língua geral amazônica”.
+      </p>
+    </div>
+  </section>
+
+  <!-- HISTÓRIA -->
+  <section class="section" id="historia">
+    <div class="section-inner">
+      <span class="pill">História</span>
+      <h2>História resumida do Tupi Antigo</h2>
+      <div class="grid-2">
+        <div>
+          <h3>Do litoral à “língua brasílica”</h3>
+          <p>
+            No século XVI, quando os portugueses chegaram ao território que hoje
+            chamamos de Brasil, não havia uma única “língua indígena”, mas sim
+            centenas. Entre elas, o Tupi Antigo se destacou por ser a língua dos
+            grandes grupos tupis do litoral, o que fez com que os colonizadores a
+            aprendessem e a usassem como língua de contato.
+          </p>
+          <p>
+            Ela ficou conhecida entre os europeus como “língua brasílica” ou apenas
+            <em>tupi</em>, e foi ensinada em colégios jesuítas, em aldeamentos e
+            missões. Em muitas regiões, o cotidiano era de fato bilíngue: falava-se
+            português e tupi.
+          </p>
+
+          <h3>Gramáticas jesuíticas e primeiros registros escritos</h3>
+          <p>
+            Os primeiros grandes registros escritos da língua são as gramáticas dos
+            jesuítas José de Anchieta (<em>Arte de gramática da língua mais usada
+            na costa do Brasil</em>, 1595) e Luís Figueira (<em>Arte da língua
+            brasílica</em>, 1621), além de catecismos, vocabulários e peças de
+            teatro em tupi. Esses textos descrevem fonologia, morfologia e sintaxe
+            da língua e são a base de muitos estudos modernos.
+          </p>
+        </div>
+        <div>
+          <div class="card">
+            <h3>Da proibição ao nheengatu</h3>
+            <p>
+              No século XVIII, reformas do marquês de Pombal buscaram impor o
+              português como única língua da administração. O ensino do tupi foi
+              proibido em 1758 e, aos poucos, o uso cotidiano do Tupi Antigo entrou
+              em declínio.
+            </p>
+            <p>
+              Mesmo assim, a estrutura da língua continuou viva nas chamadas
+              <strong>línguas gerais</strong>, variedades baseadas em tupi usadas
+              como língua franca em diferentes regiões. Uma delas deu origem ao
+              <strong>nheengatu</strong>, hoje falado por milhares de pessoas na
+              Amazônia e reconhecido como língua oficial no estado do Amazonas,
+              ao lado de outros idiomas indígenas.
+            </p>
+            <p>
+              Para quem estuda história, literatura e identidade brasileira,
+              compreender Tupi Antigo significa voltar às fontes em que muito
+              desse passado foi registrado.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPARAÇÃO -->
+  <section class="section" id="comparacao">
+    <div class="section-inner">
+      <span class="pill">Panorama</span>
+      <h2>Tupi Antigo × “Tupi-Guarani” × Nheengatu</h2>
+
+      <h3>Família tupi-guarani</h3>
+      <p>
+        <strong>Tupi-guarani</strong> não é uma língua, mas sim uma família de
+        línguas indígenas dentro do tronco tupi. Nela estão o Tupi Antigo, vários
+        dialetos históricos e línguas vivas como o guarani moderno.
+      </p>
+
+      <h3>Tupi Antigo (Tupinambá)</h3>
+      <p>
+        É a língua histórica estudada nas gramáticas coloniais e em obras como o
+        <em>Método Moderno de Tupi Antigo</em> e o <em>Dicionário de Tupi Antigo</em>.
+        É o foco principal desta página e da maior parte dos cursos universitários
+        e materiais didáticos atuais.
+      </p>
+
+      <h3>Nheengatu (Tupi moderno)</h3>
+      <p>
+        O <strong>nheengatu</strong> (também chamado de “tupi moderno” ou
+        “língua geral amazônica”) é uma língua viva que se desenvolveu a partir
+        de uma língua geral baseada no Tupi Antigo em contato com outras línguas
+        indígenas e com o português. É falado hoje por comunidades ribeirinhas e
+        indígenas na bacia do Rio Negro, e vem ganhando espaço em políticas
+        linguísticas contemporâneas.
+      </p>
+
+      <p>
+        Em resumo: quando esta página fala em <strong>Tupi Antigo</strong>, está
+        se referindo a uma língua histórica específica da família tupi-guarani,
+        e não a toda a família ou ao nheengatu.
+      </p>
+    </div>
+  </section>
+
+  <!-- LIVROS -->
+  <section class="section" id="livros">
+    <div class="section-inner">
+      <span class="pill">Referências</span>
+      <h2>Livros e dicionários essenciais de Tupi Antigo</h2>
+
+      <div class="grid-2">
+        <div>
+          <h3>Obras modernas (Navarro e outros)</h3>
+          <ul class="book-list">
+            <li>
+              <strong>Método Moderno de Tupi Antigo – A língua do Brasil dos primeiros séculos</strong>,
+              de Eduardo de Almeida Navarro (Global Editora).  
+              <span class="tag">Gramática + curso completo</span><br>
+              Livro em 36 lições, com textos em tupi, vocabulários e explicações
+              gramaticais. É hoje uma das principais portas de entrada para a língua
+              e base de muitos cursos e projetos de revitalização.
+            </li>
+            <li>
+              <strong>Dicionário de Tupi Antigo: a língua indígena clássica do Brasil</strong>,
+              de Eduardo de Almeida Navarro.  
+              <span class="tag">Dicionário bilíngue</span><br>
+              Obra de referência com seções português–tupi, tupi–português e um
+              grande conjunto de topônimos de origem tupi, explicando a formação e
+              o significado de nomes de lugares.
+            </li>
+            <li>
+              <strong>Cursos breves e materiais complementares</strong> – há apostilas
+              e cursos breves em PDF e sites filológicos que retomam a base de
+              Navarro e dos documentos coloniais, muitas vezes focados em leitura
+              de textos históricos.
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <div class="card">
+            <h3>Fontes históricas clássicas</h3>
+            <ul class="book-list">
+              <li>
+                <em>Arte de gramática da língua mais usada na costa do Brasil</em>,
+                de José de Anchieta (1595) – primeira gramática sistemática da
+                língua, escrita em latim e português.
+              </li>
+              <li>
+                <em>Arte da língua brasílica</em>, de Luís Figueira (1621) – outra
+                gramática jesuítica importante, com descrições que dialogam com
+                Anchieta.
+              </li>
+              <li>
+                Catecismos, vocabulários e textos indígenas (como as
+                <em>cartas dos índios Camarões</em>) – documentos fundamentais para
+                entender como o Tupi Antigo era realmente usado por falantes
+                nativos em diferentes contextos.
+              </li>
+            </ul>
+            <p style="font-size:0.9rem; margin-top:10px;">
+              Para quem quer ir ao nível hardcore, essas fontes históricas
+              permitem comparar a descrição dos missionários com o uso real
+              da língua pelos próprios indígenas.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUEM ESTUDA -->
+  <section class="section" id="quem-estuda">
+    <div class="section-inner">
+      <span class="pill">Hoje</span>
+      <h2>Quem estuda Tupi Antigo hoje?</h2>
+
+      <p>
+        Apesar de não ter falantes nativos, o Tupi Antigo está longe de ser “uma
+        língua morta esquecida”. Hoje ele é estudado em três frentes principais:
+      </p>
+
+      <h3>Universidades e pesquisa acadêmica</h3>
+      <p>
+        Em universidades como a USP, o Tupi Antigo aparece em disciplinas de
+        graduação e pós-graduação, projetos de filologia, linguística histórica,
+        descrição gramatical, semântica e estudos de contato linguístico. O
+        <em>Método Moderno de Tupi Antigo</em> e o <em>Dicionário de Tupi Antigo</em>
+        são bibliografia básica nesses cursos.
+      </p>
+
+      <h3>Comunidades indígenas e revitalização</h3>
+      <p>
+        Povos que têm histórico de contato com o Tupi Antigo – como Potiguara,
+        Tupiniquim e outros – vêm usando a língua como uma das ferramentas para
+        fortalecer identidades, recontar a própria história e produzir materiais
+        didáticos próprios. Em alguns casos, o Tupi Antigo dialoga com línguas
+        atuais da mesma família e com o nheengatu.
+      </p>
+
+      <h3>Comunidades online e canais de divulgação</h3>
+      <p>
+        Nos últimos anos surgiram blogs, grupos de estudo e canais de vídeo
+        dedicados ao Tupi Antigo. Entre eles:
+      </p>
+      <ul class="resource-list">
+        <li>
+          <strong>Blog Abanhe’enga</strong> – mantido por estudantes e entusiastas,
+          reúne textos, neologismos, traduções e uma página “Como aprender tupi”
+          com sugestões de materiais e cursos.
+        </li>
+        <li>
+          <strong>Tupinizando</strong> – projeto de Mateus Oliveira nas redes
+          sociais (Instagram, YouTube, TikTok) com vídeos didáticos, explicações
+          de vocabulário, análise de topônimos e comparações com o português.
+        </li>
+        <li>
+          <strong>Kian Sheik e a gramática online</strong> – além de estudos
+          próprios, Kian mantém uma versão digital navegável do Dicionário de
+          Tupi Antigo, com ferramentas para explorar a gramática e a morfologia
+          diretamente no navegador.
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- DICIONÁRIO ONLINE -->
+  <section class="section" id="dicionario-online">
+    <div class="section-inner">
+      <span class="pill">Ferramentas</span>
+      <h2>Dicionário online de Tupi Antigo + gramática interativa</h2>
+
+      <div class="grid-2">
+        <div>
+          <p>
+            Para quem está começando ou já estuda Tupi Antigo, um dos recursos
+            mais práticos hoje é a versão digital do <em>Dicionário de Tupi Antigo</em>
+            hospedada em:
+          </p>
+          <p style="font-size:1.02rem; font-weight:600;">
+            <a href="https://kiansheik.io/nhe-enga/" target="_blank" rel="noopener">
+              kiansheik.io/nhe-enga
+            </a>
+          </p>
+          <p>
+            Esse site foi desenvolvido por <strong>Kian Sheik</strong> em parceria
+            com o próprio professor Eduardo Navarro. Ele permite:
+          </p>
+          <ul class="resource-list">
+            <li>Pesquisar verbetes tanto em português quanto em Tupi Antigo;</li>
+            <li>Visualizar entradas organizadas como no dicionário impresso;</li>
+            <li>Explorar uma seção de conjugação verbal (“Mostrar conjugações”);</li>
+            <li>Alternar entre dicionário, gramática e um “playground” para testar frases.</li>
+          </ul>
+        </div>
+        <div>
+          <div class="card">
+            <h3>Gramática online / Guia rápido</h3>
+            <p>
+              Em paralelo ao dicionário, você encontra uma gramática em formato
+              de “guia” em:
+            </p>
+            <p style="font-size:0.98rem; font-weight:600;">
+              <a href="https://kiansheik.io/nhe-enga/gramatica/" target="_blank" rel="noopener">
+                kiansheik.io/nhe-enga/gramatica
+              </a>
+            </p>
+            <p>
+              Lá estão organizados os principais tópicos de fonologia, morfologia
+              e sintaxe, com exemplos comentados. É um bom complemento tanto para
+              o <em>Método Moderno</em> quanto para as aulas do Tupinizando.
+            </p>
+            <p style="font-size:0.9rem; margin-top:8px;">
+              Dica: deixe o dicionário aberto no computador ou celular enquanto
+              assiste às aulas ou lê textos em Tupi. Isso torna a leitura muito
+              mais fluida.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMO COMEÇAR -->
+  <section class="section" id="como-comecar">
+    <div class="section-inner">
+      <span class="pill">Passo a passo</span>
+      <h2>Como começar a aprender Tupi Antigo hoje</h2>
+
+      <h3>1. Entenda a pronúncia e a ortografia</h3>
+      <p>
+        Comece por uma visão geral dos sons do Tupi Antigo: vogais orais e nasais,
+        consoantes e a forma como a acentuação funciona. As primeiras lições do
+        <em>Método Moderno</em> e o guia em <code>kiansheik.io/nhe-enga/gramatica</code>
+        são ideais para isso.
+      </p>
+
+      <h3>2. Use uma gramática como trilho principal</h3>
+      <p>
+        Escolha um material estruturado para seguir lição por lição – por exemplo,
+        o <em>Método Moderno de Tupi Antigo</em>. Vá devagar, fazendo os exercícios
+        e anotando dúvidas para discutir com colegas ou em grupos de estudo.
+      </p>
+
+      <h3>3. Tenha o dicionário sempre à mão</h3>
+      <p>
+        Ao encontrar uma palavra nova, use o dicionário digital para:
+      </p>
+      <ul class="resource-list">
+        <li>Ver a tradução e exemplos de uso;</li>
+        <li>Checar a classe gramatical e se é verbo, adjetivo ou substantivo;</li>
+        <li>Perceber padrões de prefixos e sufixos que se repetem.</li>
+      </ul>
+
+      <h3>4. Consuma conteúdo em Tupi Antigo</h3>
+      <p>
+        Assista a vídeos, leia textos traduzidos e tente produzir frases simples.
+        Os conteúdos do Tupinizando, do blog Abanhe’enga e de outros criadores
+        ajudam a ver a língua em ação no século XXI.
+      </p>
+
+      <h3>5. Se possível, participe de um grupo de estudo</h3>
+      <p>
+        Aprender uma língua histórica é muito mais prazeroso em grupo. Grupos no
+        WhatsApp, encontros online e oficinas com comunidades indígenas criam um
+        ambiente de troca de dúvidas e descobertas constantes.
+      </p>
+
+      <div class="card" style="margin-top:22px;">
+        <h3>Quer um atalho? Estude com o Tupinizando</h3>
+        <p>
+          Se você quer uma rota guiada, em português claro e com comparações
+          diretas ao nosso dia a dia, o <strong>curso do Tupinizando</strong> foi
+          pensado justamente para isso – unir a seriedade dos materiais clássicos
+          com uma didática leve e acessível.
+        </p>
+        <p style="margin-top:10px;">
+          👉 <a href="https://wa.me/5519978296765" target="_blank" rel="noopener">
+            Ver a grade completa do curso
+          </a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <div class="section-inner">
+      <span class="pill">FAQ</span>
+      <h2>Perguntas frequentes sobre Tupi Antigo</h2>
+
+      <div class="faq">
+        <details>
+          <summary>Tupi Antigo é a mesma coisa que tupi-guarani?</summary>
+          <p>
+            Não. <strong>Tupi-guarani</strong> é o nome de uma família de línguas
+            indígenas. O <strong>Tupi Antigo</strong> (ou tupinambá) é uma língua
+            específica dentro dessa família, falada historicamente no litoral
+            brasileiro. Outras línguas da família incluem várias variedades de
+            guarani, por exemplo.
+          </p>
+        </details>
+
+        <details>
+          <summary>Ainda existe alguém que fala Tupi Antigo hoje?</summary>
+          <p>
+            O Tupi Antigo não é mais uma língua de uso cotidiano em nenhuma
+            comunidade, mas é estudado, lido e usado em contextos acadêmicos,
+            religiosos, artísticos e de revitalização. A língua viva mais próxima
+            hoje é o <strong>nheengatu</strong>, que descende de uma língua geral
+            baseada no Tupi Antigo.
+          </p>
+        </details>
+
+        <details>
+          <summary>Qual a diferença entre Tupi Antigo e nheengatu?</summary>
+          <p>
+            O Tupi Antigo é a língua histórica da costa no período colonial. O
+            nheengatu se formou mais tarde como língua geral na Amazônia, a partir
+            de uma base tupi em contato com o português e outras línguas
+            indígenas. Ele simplificou alguns aspectos fonológicos e morfológicos
+            e segue sendo língua materna de muitas pessoas hoje.
+          </p>
+        </details>
+
+        <details>
+          <summary>Preciso saber linguística para estudar Tupi Antigo?</summary>
+          <p>
+            Não. Um pouco de curiosidade linguística ajuda, mas materiais como o
+            <em>Método Moderno</em> e o curso do Tupinizando foram pensados para
+            quem vem “do zero”. Você aprende conceitos gramaticais na prática,
+            com exemplos e comparações com o português.
+          </p>
+        </details>
+
+        <details>
+          <summary>Por onde começar se eu tiver pouco tempo por semana?</summary>
+          <p>
+            Uma boa rota é: 2× por semana uma lição curta de gramática (livro ou
+            guia online), 2× por semana um vídeo do Tupinizando ou de outro canal
+            sobre Tupi Antigo, sempre com o dicionário aberto. Mesmo com 20–30
+            minutos por sessão você vai sentir progresso ao longo de alguns meses.
+          </p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>Dúvidas? Fale com a gente nas redes sociais:</p>
+  <p style="margin-top:10px;">
+    <a href="https://www.instagram.com/tupinizando/" target="_blank" rel="noopener">Instagram</a> ·
+    <a href="https://www.youtube.com/@tupinizando" target="_blank" rel="noopener">YouTube</a> ·
+    <a href="https://wa.me/5519978296765" target="_blank" rel="noopener">Curso</a>
+  </p>
+  <p style="margin-top:18px; font-size:0.8rem; opacity:0.7;">
+    © 2025 Tupinizando. Todos os direitos reservados.
+  </p>
+</footer>
+
+</body>
+</html>

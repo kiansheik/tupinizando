@@ -397,13 +397,12 @@
   gtag('config', 'G-ELEB5CM415');
 </script>
 <body>
-
-    <header>
-        <div class="nav-container">
-            <a href="./" class="logo">TUPINIZANDO</a>
+<header>
+    <div class="nav-container">
+        <a href="./" class="logo">TUPINIZANDO</a>
 
         <nav class="nav-links">
-            <a href="./tupi-antigo">Sobre o Tupi Antigo</a>
+            <a href="./tupi-antigo" class="nav-wide-only">Sobre o Tupi Antigo</a>
             <!-- No futuro você pode adicionar mais:
             <a href="#curso">O Curso</a>
             <a href="#contato">Contato</a>
@@ -417,6 +416,18 @@
         </a>
     </div>
 </header>
+
+<!-- # implement css for nav-wide-only -->
+ <style>
+    .nav-wide-only {
+        display: inline-block;
+    }
+    @media (max-width: 600px) {
+        .nav-wide-only {
+            display: none;
+        }
+    }
+ </style>
 
     <section class="hero">
                 <img src="./melhor.png" alt="Logo Tupinizando – Curso de Tupi Antigo" style="height: 120px; margin-bottom: 20px; margin-top: -20px;">

@@ -28,6 +28,8 @@
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="/favicon-48x48.png">
+    <link rel="icon" href="/favicon.ico" sizes="any" type="image/x-icon">
     <link rel="shortcut icon" href="/favicon.ico">
 
     <!-- opcional, mas ajuda em Android / Chrome -->
@@ -44,6 +46,7 @@
     <noscript>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     </noscript>
+    <link rel="stylesheet" href="/assets/styles.css">
     <script type="application/ld+json">
     {
     "@context": "https://schema.org",
@@ -83,84 +86,6 @@
     </script>
 
     <style>
-        :root {
-            --primary-color: #2E5E4E; /* Forest Green */
-            --secondary-color: #D4A373; /* Earthy Beige/Orange */
-            --accent-color: #BC4749; /* Urucum Red */
-            --bg-color: #FAFAF5;
-            --text-color: #333;
-            --light-text: #fff;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Open Sans', sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        h1, h2, h3, h4 {
-            font-family: 'Montserrat', sans-serif;
-        }
-
-        a {
-            text-decoration: none;
-            transition: 0.3s;
-        }
-
-        /* BUTTONS */
-        .btn-cta {
-            background-color: var(--accent-color);
-            color: white;
-            padding: 15px 30px;
-            border-radius: 50px;
-            font-weight: 700;
-            font-size: 1.1rem;
-            display: inline-block;
-            box-shadow: 0 4px 15px rgba(188, 71, 73, 0.3);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .btn-cta:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 20px rgba(188, 71, 73, 0.4);
-            background-color: #a33b3d;
-        }
-
-        /* HEADER */
-        header {
-            background: linear-gradient(rgba(46, 94, 78, 0.9), rgba(46, 94, 78, 0.9)), url('http://googleusercontent.com/image_collection/image_retrieval/16722126820050379690_0');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            padding: 20px 0;
-            text-align: center;
-            position: relative;
-        }
-
-        .nav-container {
-            max-width: 1100px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 20px;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: 800;
-            color: var(--secondary-color);
-        }
-
         /* HERO SECTION */
         .hero {
             padding: 80px 20px;
@@ -168,36 +93,14 @@
             max-width: 900px;
             margin: 0 auto;
         }
-
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 20px;
-            line-height: 1.2;
-            color: var(--primary-color);
-        }
-
         .hero p {
-            font-size: 1.2rem;
             margin-bottom: 40px;
-            color: #555;
         }
 
         /* PHILOSOPHY SECTION */
         .philosophy {
             background-color: white;
             padding: 80px 20px;
-        }
-
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 2.2rem;
-            color: var(--primary-color);
-            margin-bottom: 50px;
         }
 
         .features-grid {
@@ -347,61 +250,22 @@
             font-family: serif;
         }
 
-        /* FOOTER */
-        footer {
-            background-color: #222;
-            color: #aaa;
-            padding: 40px 20px;
-            text-align: center;
-        }
-
-        .footer-links a {
-            color: white;
-            margin: 0 10px;
-            font-weight: bold;
-        }
-
         @media (max-width: 768px) {
-            .hero h1 { font-size: 2.2rem; }
             .bio-content { flex-direction: column; }
             .bio-image img { width: 80%; margin: 0 auto; display: block; box-shadow: 10px 10px 0px var(--secondary-color); }
         }
-.nav-links {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-}
-
-.nav-links a {
-    color: #ffffff;
-    font-weight: 600;
-    font-size: 0.95rem;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-}
-
-.nav-links a:hover {
-    opacity: 0.8;
-}
-
-
     </style>
 </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-ELEB5CM415"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-ELEB5CM415');
-</script>
+<script src="/assets/analytics.js"></script>
 <body>
-<header>
+<header class="site-header">
     <div class="nav-container">
         <a href="./" class="logo">TUPINIZANDO</a>
 
         <nav class="nav-links">
+            <a href="./fontes">Fontes</a>
             <a href="./tupi-antigo" class="nav-wide-only">Sobre o Tupi Antigo</a>
             <!-- No futuro você pode adicionar mais:
             <a href="#curso">O Curso</a>
@@ -410,24 +274,11 @@
         </nav>
 
         <a href="https://wa.me/5519978296765"
-           class="btn-cta"
-           style="padding: 10px 20px; font-size: 0.9rem;">
+           class="btn-cta btn-cta--small">
             Matricule-se
         </a>
     </div>
 </header>
-
-<!-- # implement css for nav-wide-only -->
- <style>
-    .nav-wide-only {
-        display: inline-block;
-    }
-    @media (max-width: 600px) {
-        .nav-wide-only {
-            display: none;
-        }
-    }
- </style>
 
     <section class="hero">
                 <img src="./melhor.png" alt="Logo Tupinizando – Curso de Tupi Antigo" style="height: 120px; margin-bottom: 20px; margin-top: -20px;">
@@ -560,6 +411,7 @@
             <p style="margin-bottom: 20px;">Dúvidas? Entre em contato conosco.</p>
             <div class="footer-links">
                 <a href="/tupi-antigo">Guia de Tupi Antigo</a>
+                <a href="/fontes">Fontes</a>
                 <a href="https://www.instagram.com/tupinizando/">Instagram</a>
                 <a href="https://www.youtube.com/@tupinizando">YouTube</a>
                 <a href="https://wa.me/5519978296765">Curso</a>
